@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grandscale Home Thinking — Interior & Architecture Journal</title>
+  <meta name="description" content="Independent editorial on interior design, architecture, materials, lighting and modern living. In-depth guides, practical wisdom.">
+  <meta name="author" content="Grandscale Editorial">
+  <link rel="canonical" href="https://www.grandscalehome.com/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Grandscale Home Thinking — Interior & Architecture Journal">
+  <meta property="og:description" content="Independent editorial on interior design, architecture, materials, lighting and modern living.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.grandscalehome.com/">
+  <meta property="og:image" content="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Grandscale Home Thinking",
+    "description": "Independent editorial on interior design, architecture, materials, lighting and modern living.",
+    "url": "https://www.grandscalehome.com/",
+    "author": {
+      "@type": "Person",
+      "name": "Elena Marchetti"
+    }
+  }
+  </script>
+  <style>
+    /* ---------- RESET & BASE ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #fcfaf7;
+      color: #1e1e1e;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      font-size: 1.05rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    a {
+      color: #1e3f4a;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    a:hover { color: #a5633b; }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* ---------- HEADER ---------- */
+    .blog-header {
+      border-bottom: 1px solid #e5ddd6;
+      background: #fcfaf7;
+      padding: 1.2rem 0 0.8rem;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(6px);
+      background: rgba(252, 250, 247, 0.92);
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+      line-height: 1.1;
+    }
+    .logo span {
+      font-style: italic;
+      font-weight: 400;
+      color: #8b6b4f;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+      color: #3d3d3d;
+      list-style: none;
+    }
+    .nav-links a { color: #3d3d3d; }
+    .nav-links a:hover { color: #8b5a2b; }
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid #d9d2ca;
+      border-radius: 30px;
+      padding: 0.2rem 0.2rem 0.2rem 1rem;
+      background: white;
+    }
+    .search-box input {
+      border: none;
+      padding: 0.5rem 0.5rem 0.5rem 0;
+      font-size: 0.9rem;
+      width: 150px;
+      background: transparent;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .search-box button {
+      background: #1e3f4a;
+      border: none;
+      color: white;
+      padding: 0.45rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .search-box button:hover { background: #a5633b; }
+    /* ---------- CATEGORY FILTER BAR ---------- */
+    .category-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      padding: 1rem 0 0.5rem;
+      border-bottom: 1px solid #ece6df;
+      margin-bottom: 2rem;
+    }
+    .category-btn {
+      background: transparent;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+      color: #5f5f5f;
+      cursor: pointer;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.1s;
+    }
+    .category-btn.active {
+      color: #1a1a1a;
+      border-bottom-color: #a5633b;
+    }
+    .category-btn:hover { color: #a5633b; }
+    /* ---------- LAYOUT ---------- */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      margin: 2rem 0 4rem;
+    }
+    /* ---------- FEATURED ---------- */
+    .featured-article {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+      border: 1px solid #efe9e2;
+      margin-bottom: 3rem;
+    }
+    .featured-img {
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .featured-text {
+      padding: 2rem 2rem 2rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .category-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #a5633b;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+    .featured-text h2 {
+      font-size: 2.2rem;
+      margin: 0 0 0.8rem;
+      line-height: 1.2;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: #6b6b6b;
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+    .excerpt {
+      color: #3d3d3d;
+      margin-bottom: 1.5rem;
+    }
+    .read-more {
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border-bottom: 1px solid #a5633b;
+      align-self: flex-start;
+    }
+    /* ---------- ARTICLE CARDS ---------- */
+    .articles-section h2 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #e5ddd6;
+      padding-bottom: 0.75rem;
+    }
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .article-card {
+      background: white;
+      border: 1px solid #efe9e2;
+      border-radius: 16px;
+      padding: 1.5rem 1.5rem 1.8rem;
+      transition: box-shadow 0.15s, transform 0.1s;
+      display: flex;
+      flex-direction: column;
+    }
+    .article-card:hover {
+      box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+      transform: translateY(-2px);
+    }
+    .article-card .category-tag { margin-bottom: 0.4rem; }
+    .article-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+    .article-card .meta { font-size: 0.8rem; margin-bottom: 1rem; }
+    .article-card p {
+      color: #3f3f3f;
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+      flex: 1;
+    }
+    /* ---------- SIDEBAR ---------- */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+    .sidebar-widget {
+      background: white;
+      border: 1px solid #efe9e2;
+      border-radius: 20px;
+      padding: 1.8rem 1.5rem;
+    }
+    .sidebar-widget h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.2rem;
+      color: #1a1a1a;
+      border-bottom: 1px solid #e5ddd6;
+      padding-bottom: 0.6rem;
+    }
+    .popular-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .popular-list li {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      border-left: 2px solid #d9cfc6;
+      padding-left: 0.9rem;
+    }
+    .popular-list a { font-weight: 500; color: #1e1e1e; }
+    .popular-list span {
+      display: block;
+      font-size: 0.75rem;
+      color: #8b6b4f;
+      margin-top: 0.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .author-box {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .author-box img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .author-box p { font-size: 0.85rem; color: #4a4a4a; }
+    /* ---------- FAQ ---------- */
+    .faq-section {
+      margin: 4rem 0 2rem;
+      border-top: 1px solid #e5ddd6;
+      padding-top: 3rem;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 3rem;
+      margin-top: 2rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e5ddd6;
+      padding: 0.5rem 0 1rem;
+    }
+    .faq-question {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      color: #1a1a1a;
+    }
+    .faq-question span { font-size: 1.3rem; color: #a5633b; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      color: #3d3d3d;
+      font-size: 0.95rem;
+      padding-right: 1.5rem;
+    }
+    .faq-answer.open { max-height: 300px; margin-top: 0.5rem; }
+    /* ---------- NEWSLETTER ---------- */
+    .newsletter {
+      background: #1e3f4a;
+      color: white;
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .newsletter h2 { color: white; margin-top: 0; }
+    .newsletter p { color: #d0e0e5; margin-bottom: 2rem; }
+    .newsletter input {
+      padding: 0.9rem 1.2rem;
+      border-radius: 40px;
+      border: none;
+      width: 280px;
+      max-width: 100%;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .newsletter button {
+      background: #a5633b;
+      border: none;
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.15s;
+    }
+    .newsletter button:hover { background: #8b4f2f; }
+    /* ---------- FOOTER ---------- */
+    .editorial-footer {
+      border-top: 1px solid #e5ddd6;
+      padding: 3rem 0 2rem;
+      font-size: 0.9rem;
+      color: #4a4a4a;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-grid h5 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+    .footer-grid ul { list-style: none; }
+    .footer-grid li { margin-bottom: 0.5rem; }
+    .footer-grid a { color: #4a4a4a; }
+    .footer-grid a:hover { color: #a5633b; }
+    .copyright {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5ddd6;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .content-grid { grid-template-columns: 1fr; }
+      .sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      .featured-article { grid-template-columns: 1fr; }
+      .featured-text { padding: 1.5rem; }
+      .article-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+      .header-inner { flex-direction: column; align-items: stretch; }
+      .nav-links { justify-content: center; gap: 1rem; }
+    }
+    @media (max-width: 480px) {
+      .article-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .newsletter input { width: 100%; margin-bottom: 0.8rem; }
+      .newsletter button { margin-left: 0; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="blog-header">
+  <div class="container header-inner">
+    <div class="logo">Grandscale <span>Home Thinking</span></div>
+    <ul class="nav-links">
+     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search articles…" aria-label="Search articles">
+      <button id="searchBtn">Search</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- CATEGORY FILTER -->
+  <div class="category-bar" id="categoryBar">
+    <button class="category-btn active" data-category="all">All</button>
+    <button class="category-btn" data-category="interior">Interior Design</button>
+    <button class="category-btn" data-category="architecture">Architecture</button>
+    <button class="category-btn" data-category="materials">Materials</button>
+    <button class="category-btn" data-category="lighting">Lighting</button>
+    <button class="category-btn" data-category="space">Space Planning</button>
+    <button class="category-btn" data-category="furniture">Furniture</button>
+  </div>
+
+  <div class="content-grid">
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+      <!-- FEATURED ARTICLE -->
+      <article class="featured-article" data-category="interior">
+        <img class="featured-img" src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Sunlit modern living room with neutral tones, linen sofa, and walnut shelving">
+        <div class="featured-text">
+          <div class="category-tag">Interior Design</div>
+          <h2>The Quiet Power of Neutral Interiors: A Room-by-Room Guide</h2>
+          <div class="meta"><span>Elena Marchetti</span> <span>12 min read</span></div>
+          <p class="excerpt">Neutral palettes are far from boring. We explore how texture, undertone, and light transform beige, greige, and bone into sophisticated backdrops for daily life.</p>
+          <a href="#" class="read-more">Read article →</a>
+        </div>
+      </article>
+
+      <!-- ARTICLE GRID -->
+      <section class="articles-section">
+        <h2>Latest Stories</h2>
+        <div class="article-grid" id="articleGrid">
+          <!-- article 1 -->
+          <article class="article-card" data-category="architecture">
+            <div class="category-tag">Architecture</div>
+            <h3>Passive Cooling in Modern Homes: Lessons from Vernacular Architecture</h3>
+            <div class="meta"><span>James Chen</span> <span>8 min read</span></div>
+            <p>Before air conditioning, builders used orientation, thermal mass, and courtyards. Here’s how to apply those principles today.</p>
+            <a href="#" class="read-more">Read →</a>
+          </article>
+          <!-- article 2 -->
+          <article class="article-card" data-category="lighting">
+            <div class="category-tag">Lighting</div>
+            <h3>Layered Lighting: The Three-Layer Method for Every Room</h3>
+            <div class="meta"><span>Maya Lin</span> <span>7 min read</span></div>
+            <p>Ambient, task, and accent—discover how to combine them like a designer for warmth and function.</p>
+            <a href="#" class="read-more">Read →</a>
+          </article>
+          <!-- article 3 -->
+          <article class="article-card" data-category="materials">
+            <div class="category-tag">Materials</div>
+            <h3>Lime Plaster vs. Gypsum: Choosing the Right Wall Finish</h3>
+            <div class="meta"><span>Elena Marchetti</span> <span>9 min read</span></div>
+            <p>Breathability, patina, and repair—a deep dive into two classic wall finishes and where each shines.</p>
+            <a href="#" class="read-more">Read →</a>
+          </article>
+          <!-- article 4 -->
+          <article class="article-card" data-category="space">
+            <div class="category-tag">Space Planning</div>
+            <h3>Small Space, Big Living: Zoning Without Walls</h3>
+            <div class="meta"><span>James Chen</span> <span>6 min read</span></div>
+            <p>Rugs, ceiling drops, and furniture placement can define zones without sacrificing openness.</p>
+            <a href="#" class="read-more">Read →</a>
+          </article>
+          <!-- article 5 -->
+          <article class="article-card" data-category="furniture">
+            <div class="category-tag">Furniture</div>
+            <h3>Investing in Casegoods: Solid Wood vs. Veneer</h3>
+            <div class="meta"><span>Maya Lin</span> <span>5 min read</span></div>
+            <p>What to look for in joinery, grain matching, and finish longevity when buying heirloom-quality pieces.</p>
+            <a href="#" class="read-more">Read →</a>
+          </article>
+          <!-- article 6 -->
+          <article class="article-card" data-category="interior">
+            <div class="category-tag">Interior Design</div>
+            <h3>Colour Psychology in Bedrooms: Calm, Warm, or Energising?</h3>
+            <div class="meta"><span>Elena Marchetti</span> <span>10 min read</span></div>
+            <p>How different hues affect rest—and the specific shades that promote deeper sleep.</p>
+            <a href="#" class="read-more">Read →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECOND SECTION: DEEPER GUIDES -->
+      <section class="articles-section" style="margin-top: 3rem;">
+        <h2>Practical Guides</h2>
+        <div class="article-grid">
+          <article class="article-card" data-category="interior">
+            <div class="category-tag">Interior Design</div>
+            <h3>How to Mix Patterns Without a Headache</h3>
+            <div class="meta"><span>Elena Marchetti</span> <span>8 min read</span></div>
+            <p>Scale, colour bridging, and the 60-30-10 rule—plus when to break it.</p>
+            <a href="#" class="read-more">Read →</a>
+          </article>
+          <article class="article-card" data-category="architecture">
+            <div class="category-tag">Architecture</div>
+            <h3>Reading Floor Plans: A Beginner’s Guide to Circulation & Light</h3>
+            <div class="meta"><span>James Chen</span> <span>11 min read</span></div>
+            <p>Understand sightlines, furniture placement, and window orientation before you buy or build.</p>
+            <a href="#" class="read-more">Read →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">What’s the best way to start an interior design project? <span>+</span></div>
+            <div class="faq-answer">Begin with a clear brief: how you want to feel in the space, your budget, and non-negotiables. Collect visual references and measure everything before buying a single item.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">How do I choose a paint colour that works with my light? <span>+</span></div>
+            <div class="faq-answer">Test large swatches on multiple walls and observe them at different times of day. North-facing rooms need warmer undertones; south-facing rooms can handle cooler shades.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">What’s the ideal ceiling height for a modern home? <span>+</span></div>
+            <div class="faq-answer">There’s no single ideal, but 2.7–3.0 metres is comfortable for most living areas. Higher ceilings feel grander but require careful lighting and acoustics.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Are open-plan layouts still popular? <span>+</span></div>
+            <div class="faq-answer">Yes, but with more nuance. Zoning through furniture, partial walls, and ceiling changes keeps openness while adding definition.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <div class="newsletter">
+        <h2>Grandscale Letter</h2>
+        <p>Monthly essays, project tours, and practical guides. No spam, ever.</p>
+        <input type="email" placeholder="Your email address" aria-label="Email address">
+        <button>Subscribe</button>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <h4>Popular This Month</h4>
+        <ul class="popular-list">
+          <li><a href="#">The 7 Most Common Lighting Mistakes (and How to Fix Them)</a><span>Lighting · 9 min</span></li>
+          <li><a href="#">Why Lime Plaster Is Making a Comeback</a><span>Materials · 6 min</span></li>
+          <li><a href="#">Small Bathroom, Big Ideas: 12 Layouts That Work</a><span>Space Planning · 8 min</span></li>
+          <li><a href="#">A Beginner’s Guide to Architectural Styles</a><span>Architecture · 14 min</span></li>
+        </ul>
+      </div>
+      <div class="sidebar-widget">
+        <h4>About the Editor</h4>
+        <div class="author-box">
+          <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Elena Marchetti, editor">
+          <p>Elena Marchetti is an interior designer and writer. She founded Grandscale Home Thinking to share slow, considered design knowledge.</p>
+        </div>
+      </div>
+      <div class="sidebar-widget">
+        <h4>Topics</h4>
+        <ul class="popular-list" style="border-left: none; padding-left: 0;">
+          <li><a href="#">Residential Architecture</a></li>
+          <li><a href="#">Sustainable Design</a></li>
+          <li><a href="#">Colour Theory</a></li>
+          <li><a href="#">Renovation Diaries</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ABOUT / CONTACT / PRIVACY / TERMS / COOKIE (compact) -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 2rem; padding: 2rem 0; border-top: 1px solid #e5ddd6;">
+    <div><h4 style="font-family: Inter; font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">About</h4><p style="font-size: 0.9rem;">Grandscale Home Thinking is an independent editorial publication covering interior design and architecture with depth and practicality.</p></div>
+    <div><h4 style="font-family: Inter; font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Contact</h4><p style="font-size: 0.9rem;">hello@grandscalehome.com<br>Editorial enquiries only.</p></div>
+    <div><h4 style="font-family: Inter; font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Privacy</h4><p style="font-size: 0.9rem;">We respect your data. Read our full privacy policy and cookie notice.</p></div>
+    <div><h4 style="font-family: Inter; font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Terms</h4><p style="font-size: 0.9rem;">All content is for informational purposes. Please credit Grandscale when sharing.</p></div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="editorial-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Grandscale <span>Home Thinking</span></div>
+        <p style="font-size: 0.85rem; max-width: 250px;">Independent editorial on interior design, architecture, materials, lighting and modern living.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul><li><a href="#">Interiors</a></li><li><a href="#">Architecture</a></li><li><a href="#">Materials</a></li><li><a href="#">Lighting</a></li></ul>
+      </div>
+      <div>
+        <h5>Information</h5>
+        <ul><li><a href="#">About</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Cookie Policy</a></li></ul>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <ul><li><a href="#">Instagram</a></li><li><a href="#">Pinterest</a></li><li><a href="#">LinkedIn</a></li></ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2025 Grandscale Home Thinking. All rights reserved.</span>
+      <span>Made with intention.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+  (function() {
+    // CATEGORY FILTERING
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const articles = document.querySelectorAll('.article-card, .featured-article');
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const articleGrid = document.getElementById('articleGrid');
+
+    // filter function
+    function filterArticles() {
+      const activeCategory = document.querySelector('.category-btn.active')?.dataset.category || 'all';
+      const searchTerm = searchInput.value.trim().toLowerCase();
+
+      articles.forEach(article => {
+        const category = article.dataset.category || '';
+        const title = article.querySelector('h3, h2')?.innerText.toLowerCase() || '';
+        const text = article.innerText.toLowerCase();
+        const matchesCategory = activeCategory === 'all' || category === activeCategory;
+        const matchesSearch = searchTerm === '' || text.includes(searchTerm);
+        article.style.display = (matchesCategory && matchesSearch) ? '' : 'none';
+      });
+    }
+
+    // category click
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        filterArticles();
+      });
+    });
+
+    // search
+    searchBtn.addEventListener('click', filterArticles);
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') filterArticles();
+    });
+
+    // FAQ accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(q => {
+      q.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        if (!isOpen) answer.classList.add('open');
+      });
+    });
+
+    // set first FAQ open by default
+    const firstAnswer = document.querySelector('.faq-answer');
+    if (firstAnswer) firstAnswer.classList.add('open');
+
+    // touch up: ensure all articles initially visible
+    filterArticles();
+  })();
+</script>
+</body>
+</html>
